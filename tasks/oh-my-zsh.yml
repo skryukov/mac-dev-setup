@@ -1,10 +1,23 @@
 ---
+- name: Check that oh-my-zsh exists
+  stat:
+    path: ~/.oh-my-zsh
+  register: stat_result
+
+- name: Install oh my zsh
+  shell: 'curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh'
+  when: stat_result.stat.exists == False
+
 - name: Copy dotfiles
   copy:
-    src: "{{ item }}"
+    src: "templates/dotfiles/{{ item }}"
     dest: ~/
-  with_fileglob:
-    - templates/dotfiles/*
+  with_list:
+    - .aliases
+    - .gemrc
+    - .gitconfig
+    - .gitignore
+    - .zsh_custom
 
 - name: Add custom zsh settings
   lineinfile:

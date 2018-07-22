@@ -61,11 +61,11 @@ homebrew_cask_apps:
   - sequel-pro
   - skype
   - steam
-  - sublime
+  - sublime-text
   - tunnelbear
   - visual-studio-code
   - vlc
-  - yandex-disk
+#  - yandex-disk
 
 mas_email: ""
 mas_password: ""
