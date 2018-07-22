@@ -1,0 +1,11 @@
+prompt_context() {}
+
+setopt auto_cd
+
+cdpath=($HOME/rails)
+
+eval "$(rbenv init -)"
+
+. /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+. ~/.aliases

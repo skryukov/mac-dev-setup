@@ -1,0 +1,34 @@
+---
+- hosts: all
+  connection: local
+
+  vars_files:
+    - default.config.yml
+
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_fileglob:
+        - ../config.yml
+
+  roles:
+    - role: geerlingguy.homebrew
+    - role: geerlingguy.dotfiles
+    - role: geerlingguy.mas
+
+  tasks:
+    - name: Copy fonts
+      copy:
+        src: templates/fonts/Roboto Mono Medium for Powerline.ttf
+        dest: /Library/Fonts
+
+    - name: Run .macos
+      shell: "templates/.macos --no-restart"
+      changed_when: false
+
+    - name: Add dotfiles
+      import_tasks: tasks/oh-my-zsh.yml
+
+    - name: install ruby
+      shell: "rbenv install 2.5.1"
+    - name: set default ruby
+      shell: "rbenv global 2.5.1"

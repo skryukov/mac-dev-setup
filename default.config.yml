@@ -1,0 +1,86 @@
+---
+downloads: ~/.ansible-downloads/
+
+dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/.dotfiles
+dotfiles_files:
+  - .aliases
+  - .gemrc
+  - .gitignore
+  - .gitconfig
+  - .osx
+  - symbolichotkeys.plist
+
+homebrew_installed_packages:
+  - autoconf
+  - git
+  - go
+  - imagemagick
+  - mysql
+  - mas
+  - node
+  - openssl
+  - openvpn
+  - postgresql
+  - rbenv
+  - readline
+  - redis
+  - ruby-build
+  - ssh-copy-id
+  - sqlite
+  - tmux
+  - wget
+  - zsh-syntax-highlighting
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - 1password
+  - alfred
+  - charles
+  - codekit
+  - cursorsense
+  - dash
+  - db-browser-for-sqlite
+  - bettertouchtool
+  - discord
+  - docker
+  - firefox
+  - folx
+  - google-chrome
+  - handbrake
+  - imageoptim
+  - iterm2
+  - jetbrains-toolbox
+  - omnifocus
+  - postman
+  - sequel-pro
+  - skype
+  - steam
+  - sublime
+  - tunnelbear
+  - visual-studio-code
+  - vlc
+  - yandex-disk
+
+mas_email: ""
+mas_password: ""
+
+mas_installed_apps:
+  - { id: 671736912,  name: "FruitJuice" }
+  - { id: 1289197285, name: "MindNode" }
+  - { id: 409201541,  name: "Pages" }
+  - { id: 409203825,  name: "Numbers" }
+  - { id: 1091189122, name: "Bear" }
+  - { id: 918858936,  name: "Airmail 3" }
+  - { id: 747648890,  name: "Telegram" }
+  - { id: 425424353,  name: "The Unarchiver" }
+  - { id: 641027709,  name: "Color Picker" }
+  - { id: 803453959,  name: "Slack" }
+  - { id: 407963104,  name: "Pixelmator" }
+  - { id: 403388562,  name: "Transmit" }
+  - { id: 777233759,  name: "Focus" }

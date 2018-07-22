@@ -1,0 +1,9 @@
+[color]
+	ui = true
+[user]
+	name = Святослав Крюков
+	email = s.kryukov@medsolutions.ru
+[core]
+  excludesfile = ~/.gitignore
+[alias]
+	sla = log --oneline --decorate --graph --all
