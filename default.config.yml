@@ -41,6 +41,7 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
   - alfred
+  - beardedspice
   - charles
   - codekit
   - cursorsense
@@ -63,15 +64,16 @@ homebrew_cask_apps:
   - steam
   - sublime-text
   - tunnelbear
+  - viscosity
   - visual-studio-code
   - vlc
-#  - yandex-disk
+  - yandex-disk
 
 mas_email: ""
 mas_password: ""
 
 mas_installed_apps:
-  - { id: 671736912,  name: "FruitJuice" }
+#  - { id: 671736912,  name: "FruitJuice" }
   - { id: 1289197285, name: "MindNode" }
   - { id: 409201541,  name: "Pages" }
   - { id: 409203825,  name: "Numbers" }
