@@ -34,10 +34,4 @@
   lineinfile:
     path: ~/.zshrc
     regexp: '^plugins='
-    line: 'plugins=(git zsh-syntax-highlighting)'
-    
-- name: Set default user
-  lineinfile:
-    path: ~/.zshrc
-    regexp: '^DEFAULT_USER='
-    line: 'DEFAULT_USER=`whoami`'
+    line: 'plugins=(git)'

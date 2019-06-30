@@ -29,15 +29,15 @@
     - name: Add dotfiles
       import_tasks: tasks/oh-my-zsh.yml
 
-    - name: Check that ruby 2.5.1 installed
+    - name: Check that ruby 2.6.3 installed
       shell: rbenv versions
       register: rbenv_versions
       changed_when: false
 
     - name: install ruby
-      shell: "rbenv install 2.5.1"
-      when: rbenv_versions.stdout.find("2.5.1") == -1
+      shell: "rbenv install 2.6.3"
+      when: rbenv_versions.stdout.find("2.6.3") == -1
 
     - name: set default ruby
-      shell: "rbenv global 2.5.1"
-      when: rbenv_versions.stdout.find("* 2.5.1") != -1
+      shell: "rbenv global 2.6.3"
+      when: rbenv_versions.stdout.find("* 2.6.3") != -1

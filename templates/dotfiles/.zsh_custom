@@ -1,10 +1,14 @@
 prompt_context() {}
 
+DEFAULT_USER=`whoami`
+
 setopt auto_cd
 
 cdpath=($HOME/rails)
 
 eval "$(rbenv init -)"
+
+export GPG_TTY=$(tty)
 
 . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

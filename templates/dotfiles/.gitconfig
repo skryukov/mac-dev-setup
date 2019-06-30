@@ -1,9 +1,12 @@
 [color]
 	ui = true
 [user]
-	name = Святослав Крюков
-	email = s.kryukov@medsolutions.ru
+	name = Svyatoslav Kryukov
+	email = s.g.kryukov@yandex.ru
+	signingkey = E1EB3B4F3AE95534
 [core]
   excludesfile = ~/.gitignore
 [alias]
 	sla = log --oneline --decorate --graph --all
+[commit]
+	gpgsign = true
